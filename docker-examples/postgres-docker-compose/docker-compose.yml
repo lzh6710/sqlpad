@@ -8,6 +8,8 @@ services:
       POSTGRES_PASSWORD: sqlpad
     volumes:
       - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    ports:
+      - '5432:5432'
 
   sqlpad:
     # To use Dockerfile at root of this project, use build instead of image
@@ -17,8 +19,8 @@ services:
     ports:
       - '3000:3000'
     environment:
-      SQLPAD_ADMIN: 'admin@sqlpad.com'
-      SQLPAD_ADMIN_PASSWORD: 'admin'
+      SQLPAD_ADMIN: 'lzh6710@hotmail.com'
+      SQLPAD_ADMIN_PASSWORD: 'yjfnyjfn'
       SQLPAD_APP_LOG_LEVEL: debug
       SQLPAD_WEB_LOG_LEVEL: warn
       SQLPAD_SEED_DATA_PATH: /etc/sqlpad/seed-data
